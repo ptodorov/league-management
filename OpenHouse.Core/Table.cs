@@ -11,7 +11,7 @@ namespace OpenHouse.Core
     {
         private TableRow[] _rows;
 
-        internal Table(TableRow[] rows)
+        internal Table(IList<TableRow> rows)
         {
             _rows = rows
                 .OrderByDescending(r => r.Points)

@@ -38,5 +38,25 @@ namespace OpenHouse.Entities
         {
             get { return Players.Single(p => p.MatchRole == MatchRole.Guest); }
         }
+
+        /// <summary>
+        /// Returns the winner if any, otherwise returns null.
+        /// </summary>
+        public MatchPlayer Winner
+        {
+            get
+            {
+                if (Host.GoalsScored > Guest.GoalsScored)
+                {
+                    return Host;
+                }
+                else if (Guest.GoalsScored > Host.GoalsScored)
+                {
+                    return Guest;
+                }
+
+                return null;
+            }
+        }
     }
 }

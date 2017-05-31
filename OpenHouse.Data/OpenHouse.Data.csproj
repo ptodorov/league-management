@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RepositoryBase.cs" />
     <Compile Include="FifaLeagueContext.cs" />
+    <Compile Include="MatchesRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OpenHouse.Core\OpenHouse.Core.csproj">
+      <Project>{B2028DE4-2B84-4B1F-A68A-AD1AE83B1CD1}</Project>
+      <Name>OpenHouse.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OpenHouse.Entities\OpenHouse.Entities.csproj">
       <Project>{FED1FAC2-89D6-410A-8891-7F8782B56DE4}</Project>
       <Name>OpenHouse.Entities</Name>

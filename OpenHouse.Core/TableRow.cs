@@ -11,21 +11,21 @@ namespace OpenHouse.Core
         internal TableRow()
         { }
 
-        public uint Position { get; protected set; }
+        public uint Position { get; internal set; }
 
-        public string PlayerName { get; protected set; }
+        public string PlayerName { get; internal set; }
 
-        public string TeamName { get; protected set; }
+        public string TeamName { get; internal set; }
 
-        public uint Wins { get; protected set; }
+        public uint Wins { get; internal set; }
 
-        public uint Draws { get; protected set; }
+        public uint Draws { get; internal set; }
 
-        public uint Losses { get; protected set; }
+        public uint Losses { get; internal set; }
 
-        public uint GoalsScored { get; protected set; }
+        public uint GoalsScored { get; internal set; }
 
-        public uint GoalsConceded { get; protected set; }
+        public uint GoalsConceded { get; internal set; }
 
         public int GoalDifference
         {

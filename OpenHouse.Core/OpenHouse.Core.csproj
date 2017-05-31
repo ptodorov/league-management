@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\IMatchesRepository.cs" />
+    <Compile Include="Abstractions\IPlayersRepository.cs" />
     <Compile Include="Abstractions\IRepository.cs" />
     <Compile Include="Abstractions\ITournamentsRepository.cs" />
     <Compile Include="ITableCalculator.cs" />
@@ -48,6 +49,7 @@
     <Compile Include="Table.cs" />
     <Compile Include="TableCalculator.cs" />
     <Compile Include="TableRow.cs" />
+    <Compile Include="TableRowBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenHouse.Entities\OpenHouse.Entities.csproj">
