@@ -25,6 +25,10 @@ namespace OpenHouse.Entities
 
         public int RoundId { get; protected set; }
 
+        public string Screenshot { get; protected set; }
+
+        public DateTime DatePlayed { get; protected set; }
+
         public virtual Round Round { get; protected set; }
 
         protected virtual ICollection<MatchPlayer> Players { get; set; }

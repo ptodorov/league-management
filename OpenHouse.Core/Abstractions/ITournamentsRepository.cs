@@ -1,5 +1,4 @@
-﻿using Green4.PrintDesigner.Core.Entities;
-using OpenHouse.Entities;
+﻿using OpenHouse.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

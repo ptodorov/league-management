@@ -9,7 +9,9 @@ namespace OpenHouse.Entities
     public class Tournament
     {
         protected Tournament()
-        { }
+        {
+            Players = new HashSet<Player>();
+        }
 
         public Tournament(string name) : this()
         {
@@ -19,5 +21,7 @@ namespace OpenHouse.Entities
         public int Id { get; protected set; }
 
         public string Name { get; protected set; }
+
+        public ICollection<Player> Players { get; protected set; }
     }
 }

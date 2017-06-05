@@ -1,6 +1,9 @@
-﻿using System;
+﻿using OpenHouse.Core;
+using OpenHouse.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -8,9 +11,20 @@ namespace OpenHouse.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private readonly ITournamentService _tournamentService;
+
+        public HomeController(ITournamentService tournamentService)
         {
-            return View();
+            _tournamentService = tournamentService;
+        }
+
+        public async Task<ActionResult> Index()
+        {
+            string lastGameScreenshot = await _tournamentService.GetLastGameScreenshot();
+            var currentTournament = await _tournamentService.GetCurrentTournament();
+
+            HomeViewModel viewmodel = new HomeViewModel() { CurrentTournamentId = currentTournament.Id, LastGameScreenshot = lastGameScreenshot };
+            return View(viewmodel);
         }
 
         public ActionResult About()

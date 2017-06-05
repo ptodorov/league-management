@@ -10,5 +10,7 @@ namespace OpenHouse.Core.Abstractions
     public interface IMatchesRepository : IRepository<Match>
     {
         Task<List<Match>> GetTournamentCurrentOrFinishedMatches(int tournamentId);
+
+        Task<Match> GetLastMatch();
     }
 }

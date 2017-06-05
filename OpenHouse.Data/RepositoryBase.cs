@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OpenHouse.Data
 {
-    class RepositoryBase<TEntity> : IRepository<TEntity>
+    public class RepositoryBase<TEntity> : IRepository<TEntity> where TEntity : class
     {
         private readonly DbContext _context;
 
@@ -17,14 +17,21 @@ namespace OpenHouse.Data
             _context = context;
         }
 
-        public void Add(TEntity entity)
+        protected DbSet<TEntity> EntitySet => _context.Set<TEntity>();
+
+        protected DbSet<TOtherEntity> GetSet<TOtherEntity>() where TOtherEntity : class
         {
-            
+            return _context.Set<TOtherEntity>();
         }
 
-        public Task SaveChanges()
+        public void Add(TEntity entity)
         {
-            throw new NotImplementedException();
+            EntitySet.Add(entity);
+        }
+
+        public async Task SaveChanges()
+        {
+            await _context.SaveChangesAsync();
         }
     }
 }

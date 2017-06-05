@@ -9,7 +9,9 @@ namespace OpenHouse.Entities
     public class Round
     {
         protected Round()
-        { }
+        {
+            Matches = new HashSet<Match>();
+        }
 
         public int Id { get; protected set; }
 
@@ -18,5 +20,7 @@ namespace OpenHouse.Entities
         public int Number { get; protected set; }
 
         public Tournament Tournament { get; protected set; }
+
+        public virtual ICollection<Match> Matches { get; protected set; }
     }
 }
