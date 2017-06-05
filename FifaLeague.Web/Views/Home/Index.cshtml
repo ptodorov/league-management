@@ -1,0 +1,16 @@
+﻿@model FifaLeague.Web.Models.HomeViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    @if (Model.LastGameScreenshot != null)
+    {
+        <img src="@Model.LastGameScreenshot" />
+    }
+    else
+    {
+        <p>No games played yet</p>
+    }
+</div>
