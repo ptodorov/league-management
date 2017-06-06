@@ -15,6 +15,7 @@ namespace FifaLeague.Data
         {
             container.RegisterType<DbContext, FifaLeagueContext>();
             container.RegisterType<IMatchesRepository, MatchesRepository>();
+            container.RegisterType<ITournamentsRepository, TournamentsRepository>();
         }
     }
 }

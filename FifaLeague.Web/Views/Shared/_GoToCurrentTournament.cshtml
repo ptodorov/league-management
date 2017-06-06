@@ -1,0 +1,6 @@
+﻿@model int?
+
+@if (Model.HasValue)
+{
+    <li>@Html.ActionLink("Go to current", "Index", "Tournaments", new { id = Model }, null)</li>
+}

@@ -10,10 +10,12 @@ namespace FifaLeague.Core
 {
     class TournamentService : ITournamentService
     {
+        private readonly ITournamentsRepository _tournamentsRepository;
         private readonly IMatchesRepository _matchesRepository;
 
-        public TournamentService(IMatchesRepository matchesRepository)
+        public TournamentService(ITournamentsRepository tournamentsRepository, IMatchesRepository matchesRepository)
         {
+            _tournamentsRepository = tournamentsRepository;
             _matchesRepository = matchesRepository;
         }
 
@@ -28,14 +30,17 @@ namespace FifaLeague.Core
             throw new NotImplementedException();
         }
 
-        public Task<Tournament> GetCurrentTournament()
+        public async Task<Tournament> GetCurrentTournament()
         {
-            throw new NotImplementedException();
+            DateTime now = DateTime.UtcNow;
+            var tournament = await _tournamentsRepository.GetCurrent(now);
+            return tournament;
         }
 
-        public Task<Tournament> GetTournamentById(int tournamentId)
+        public async Task<Tournament> GetTournamentById(int tournamentId)
         {
-            throw new NotImplementedException();
+            var tournament = await _tournamentsRepository.GetById(tournamentId);
+            return tournament;
         }
     }
 }

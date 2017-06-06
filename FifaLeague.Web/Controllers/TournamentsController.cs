@@ -19,10 +19,11 @@ namespace FifaLeague.Web.Controllers
             _tournamentService = tournamentService;
         }
 
-        public async Task<ActionResult> Index(int tournamentId)
+        [Route("tournaments/{id}")]
+        public async Task<ActionResult> Index(int id)
         {
-            var tournament = await _tournamentService.GetTournamentById(tournamentId);
-            var viewModel = new TournamentViewModel() { Name = "Spring-Summer 2017", Announcement = "Still looking like Manchester City are going to keep their first place." };
+            var tournament = await _tournamentService.GetTournamentById(id);
+            var viewModel = new TournamentViewModel() { Name = tournament.Name, Announcement = "Still looking like Manchester City are going to keep their first place." };
             return View(viewModel);
         }
 
@@ -32,6 +33,13 @@ namespace FifaLeague.Web.Controllers
             var tournaments = await _tournamentService.GetAllTournaments();
 
             return View();
+        }
+
+        [ChildActionOnly]
+        public ActionResult GoToCurrentTournament()
+        {
+            var currentTournament = Task.Run(() => _tournamentService.GetCurrentTournament()).Result;
+            return PartialView("_GoToCurrentTournament", currentTournament?.Id);
         }
     }
 }

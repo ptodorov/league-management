@@ -9,6 +9,8 @@ namespace FifaLeague.Core.Abstractions
 {
     public interface IMatchesRepository : IRepository<Match>
     {
+        Task<Match> GetById(int matchId);
+
         Task<List<Match>> GetTournamentCurrentOrFinishedMatches(int tournamentId);
 
         Task<Match> GetLastMatch();

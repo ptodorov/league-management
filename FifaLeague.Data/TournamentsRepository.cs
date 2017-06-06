@@ -15,10 +15,18 @@ namespace FifaLeague.Data
         {
         }
 
-        public async Task<Tournament> GetTournamentById(int tournamentId)
+        public async Task<Tournament> GetById(int tournamentId)
         {
             var query = EntitySet
                 .Where(t => t.Id == tournamentId);
+
+            return await query.FirstOrDefaultAsync();
+        }
+
+        public async Task<Tournament> GetCurrent(DateTime now)
+        {
+            var query = EntitySet
+                .Where(t => t.StartDate <= now && t.EndDate >= now);
 
             return await query.FirstOrDefaultAsync();
         }

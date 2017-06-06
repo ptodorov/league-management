@@ -15,6 +15,14 @@ namespace FifaLeague.Data
         {
         }
 
+        public async Task<Match> GetById(int matchId)
+        {
+            var query = EntitySet
+                .Where(m => m.Id == matchId);
+
+            return await query.FirstOrDefaultAsync();
+        }
+
         public async Task<List<Match>> GetTournamentCurrentOrFinishedMatches(int tournamentId)
         {
             var query = GetSet<Round>()

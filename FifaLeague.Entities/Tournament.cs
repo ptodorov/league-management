@@ -22,6 +22,10 @@ namespace FifaLeague.Entities
 
         public string Name { get; protected set; }
 
+        public DateTime StartDate { get; protected set; }
+
+        public DateTime EndDate { get; protected set; }
+
         public ICollection<Player> Players { get; protected set; }
     }
 }

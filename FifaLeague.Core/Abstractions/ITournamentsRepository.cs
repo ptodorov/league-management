@@ -9,6 +9,8 @@ namespace FifaLeague.Core.Abstractions
 {
     public interface ITournamentsRepository : IRepository<Tournament>
     {
-        Task<Tournament> GetTournamentById(int tournamentId);
+        Task<Tournament> GetById(int tournamentId);
+
+        Task<Tournament> GetCurrent(DateTime now);
     }
 }

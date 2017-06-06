@@ -11,8 +11,11 @@ namespace FifaLeague.Core
     {
         public static void RegisterCore(this IUnityContainer unityContainer)
         {
+            unityContainer.RegisterType<IFileStorage, FileStorage>();
+
             unityContainer.RegisterType<ITableCalculator, TableCalculator>();
             unityContainer.RegisterType<ITournamentService, TournamentService>();
+            unityContainer.RegisterType<IMatchService, MatchService>();
         }
     }
 }

@@ -37,7 +37,7 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>@Html.ActionLink("Go to current", "Index", "Tournaments", new { id = Model.CurrentTournamentId })</li>
+                    @{Html.RenderAction("GoToCurrentTournament", "Tournaments");}
                 </ul>
             </div>
         </div>

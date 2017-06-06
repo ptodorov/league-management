@@ -23,18 +23,8 @@ namespace FifaLeague.Entities
 
         public MatchRole MatchRole { get; protected set; }
 
-        public uint GoalsScored { get; protected set; }
+        public uint GoalsScored { get; set; }
 
         public virtual Match Match { get; set; }
-
-        public void Score()
-        {
-            if (Match.State != MatchState.Playing)
-            {
-                throw new InvalidOperationException("Method is not allowed while match is not being played.");
-            }
-
-            GoalsScored++;
-        }
     }
 }

@@ -3,3 +3,5 @@ bin
 obj
 packages
 *.suo
+/FifaLeague.Web/App_Data/FifaLeague.mdf
+/FifaLeague.Web/App_Data/FifaLeague_log.ldf

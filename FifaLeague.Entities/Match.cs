@@ -25,7 +25,7 @@ namespace FifaLeague.Entities
 
         public int RoundId { get; protected set; }
 
-        public string Screenshot { get; protected set; }
+        public string Screenshot { get; set; }
 
         public DateTime DatePlayed { get; protected set; }
 
