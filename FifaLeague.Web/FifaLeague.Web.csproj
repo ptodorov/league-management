@@ -170,7 +170,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\MatchData.cs" />
     <Compile Include="Models\NewMatch.cs" />
+    <Compile Include="Models\RoundData.cs" />
+    <Compile Include="Models\SubmitMatchViewModel.cs" />
     <Compile Include="Models\TournamentViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -229,10 +232,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Tournaments\Index.cshtml" />
     <Content Include="Views\Shared\_GoToCurrentTournament.cshtml" />
+    <Content Include="Views\Matches\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Matches\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

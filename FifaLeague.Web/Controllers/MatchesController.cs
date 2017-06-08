@@ -19,6 +19,24 @@ namespace FifaLeague.Web.Controllers
             _matchService = matchService;
         }
 
+        [HttpGet]
+        [Route("match/submit")]
+        public ActionResult Create()
+        {
+            List<MatchData> matches = new List<MatchData>();
+            matches.Add(new MatchData() { Id = 2, Name = "Arsenal vs Chelsea", RoundName = "10th round" });
+            matches.Add(new MatchData() { Id = 2, Name = "Man City vs Liverpool", RoundName = "10th round" });
+            matches.Add(new MatchData() { Id = 2, Name = "Man Utd vs Leicester", RoundName = "10th round" });
+            matches.Add(new MatchData() { Id = 2, Name = "Tottenham vs Everton", RoundName = "10th round" });
+
+            SubmitMatchViewModel viewModel = new SubmitMatchViewModel()
+            {
+                Matches = matches
+            };
+
+            return View(viewModel);
+        }
+
         [HttpPost]
         [Route("match/submit")]
         public async Task<ActionResult> Create(NewMatch newMatch)

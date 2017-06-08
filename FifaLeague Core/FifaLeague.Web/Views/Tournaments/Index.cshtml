@@ -1,0 +1,13 @@
+﻿@model FifaLeague.Web.Models.TournamentViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>@Model.Name</h1>
+        <p>@Model.Announcement</p>
+        <a class="submit-match btn btn-default" asp-action="Create" asp-controller="Matches" asp-all-route-data-tournamentId="@Url.ActionContext.RouteData.Values["id"]">Submit a match</a>
+    </div>
+</div>

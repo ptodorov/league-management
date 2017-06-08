@@ -8,6 +8,7 @@
     <div class="jumbotron">
         <h1>@Model.Name</h1>
         <p>@Model.Announcement</p>
+        @Html.ActionLink("Submit a match", "Create", "Matches", routeValues: new { tournamentId = Url.RequestContext.RouteData.Values["id"] }, htmlAttributes: new { @class = "submit-match btn btn-default" })
     </div>
 </div>
 

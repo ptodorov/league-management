@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifaLeague.Entities", "FifaLeague.Entities\FifaLeague.Entities.csproj", "{AD3A34CD-D959-4BBA-97F2-FFBF11D48D54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifaLeague.Data", "FifaLeague.Data\FifaLeague.Data.csproj", "{6881736A-F3F0-4B92-AE4E-F16BAB205DEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifaLeague.Core", "FifaLeague.Core\FifaLeague.Core.csproj", "{E1B553BD-B71B-4D80-B163-84E6F289DAF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifaLeague.Web", "FifaLeague.Web\FifaLeague.Web.csproj", "{B3453EF7-36A1-47C3-8E19-C6DC86EF5536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{91E14A84-6DCA-4C05-92F3-D7622AE9854C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD3A34CD-D959-4BBA-97F2-FFBF11D48D54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3A34CD-D959-4BBA-97F2-FFBF11D48D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3A34CD-D959-4BBA-97F2-FFBF11D48D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3A34CD-D959-4BBA-97F2-FFBF11D48D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6881736A-F3F0-4B92-AE4E-F16BAB205DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6881736A-F3F0-4B92-AE4E-F16BAB205DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6881736A-F3F0-4B92-AE4E-F16BAB205DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6881736A-F3F0-4B92-AE4E-F16BAB205DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1B553BD-B71B-4D80-B163-84E6F289DAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1B553BD-B71B-4D80-B163-84E6F289DAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1B553BD-B71B-4D80-B163-84E6F289DAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1B553BD-B71B-4D80-B163-84E6F289DAF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3453EF7-36A1-47C3-8E19-C6DC86EF5536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3453EF7-36A1-47C3-8E19-C6DC86EF5536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3453EF7-36A1-47C3-8E19-C6DC86EF5536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3453EF7-36A1-47C3-8E19-C6DC86EF5536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E14A84-6DCA-4C05-92F3-D7622AE9854C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E14A84-6DCA-4C05-92F3-D7622AE9854C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E14A84-6DCA-4C05-92F3-D7622AE9854C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E14A84-6DCA-4C05-92F3-D7622AE9854C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+﻿@model int?
+
+@if (Model.HasValue)
+{
+    <li>
+        <a asp-action="Index" asp-controller="Tournaments" asp-route-id="@Model">Go to current</a>
+    </li>
+}

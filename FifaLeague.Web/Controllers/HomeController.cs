@@ -21,7 +21,7 @@ namespace FifaLeague.Web.Controllers
         public async Task<ActionResult> Index()
         {
             string lastGameScreenshot = await _tournamentService.GetLastGameScreenshot();
-            HomeViewModel viewmodel = new HomeViewModel() { LastGameScreenshot = lastGameScreenshot };
+            HomeViewModel viewmodel = new HomeViewModel() { LastGameResult = "Arsenal 3 : 0 Chelsea", LastGameScreenshot = lastGameScreenshot };
             return View(viewmodel);
         }
 

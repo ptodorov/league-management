@@ -1,0 +1,34 @@
+﻿@model FifaLeague.Web.Models.SubmitMatchViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="panel panel-default">
+    @using (Html.BeginForm("Create", "Matches", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="form-group">
+            <label for="MatchId">Match:</label>
+            <select class="form-control" id="MatchId" name="MatchId">
+                @foreach (var match in Model.Matches)
+                {
+                    <option value="@match.Id">@match.Name</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="email">Host scored:</label>
+            <input type="number" class="form-control" id="HostGoalsScored" name="HostGoalsScored">
+        </div>
+        <div class="form-group">
+            <label for="email">Guest scored:</label>
+            <input type="number" class="form-control" id="GuestGoalsScored" name="GuestGoalsScored">
+        </div>
+        <div class="form-group">
+            <label for="Screenshot">Host scored:</label>
+            <input type="file" class="form-control" id="Screenshot" name="Screenshot">
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    }
+</div>
